@@ -1,0 +1,35 @@
+*{margin:0; padding: 0;}
+
+#img1_estado{
+  display: inline-block;
+  width: 50%;
+  height: 10%;
+  float: left;
+  padding: 20px;
+  border: 0px solid black;
+}
+
+#img2_conalep{
+  display: inline-block;
+  width: 49%;
+  height: 8%;
+  float: right;
+  border: 0px solid black;
+}
+#logos{
+  overflow: hidden;
+  line-height: 100px;
+
+}
+/*Titulo*/
+div#titulo{
+  width:100%;
+  margin-top:15px;
+}
+p#header{
+  text-align: center;
+  font-size: 2.5em;
+  color:#9a9a9a;
+}
+
+

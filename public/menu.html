@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>menu</title>
+	<style type="text/css">
+		*{
+	margin: 0px;
+	padding: 0px;
+}
+header{
+  display: inline-block;
+  margin:10px auto;
+  width: 40%;
+  height: 300px;
+  background-color: black;
+  border:100px solid red;
+}
+div.contenedor{
+	width: 50%;
+	height: 150px;
+	float: left;
+	transition: height .4s;
+	border-radius: 8%;
+}
+div#uno{
+  background-color: rgb(184, 30, 222);
+}
+div#dos{
+  background-color: rgb(12, 234, 227  );
+}
+
+img.icon{
+	display: block;
+	margin: 7% auto;
+	background-color: rgba(255, 255, 255,.15 );
+	width: 25%;
+	padding: 1%;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 20px rgba(255,255,255,0);
+   	transition: box-shadow .4s;
+}
+p.texto{
+	text-align: center;
+	font-size: 1.2em;
+	color: white;
+	opacity: .7;
+
+	transition: padding-top .4s;
+}
+div.contenedor:hover{
+	height: 250px;
+}
+div.contenedor:hover p.texto{
+	padding-top: 20px;
+	opacity: 1;
+}
+div.contenedor:hover img.icon{
+	box-shadow: 0px 0px 0px 0px rgba(255,255,255,1)
+}
+
+/*Titulo*/
+div#titulo{
+  width:100%;
+  margin-top:17px;
+    background-color: blue;
+
+}
+p#header{
+  text-align: center;
+  font-size: 2.5em;
+  color:#9a9a9a;
+}
+
+#modal_form{
+	    width: 85%;
+    text-align: right;
+
+	    background-color: green;
+
+}
+	
+
+	</style>
+
+</head>
+
+<body>
+
+		<div id="titulo">
+		<p id="header">Laboratorio de Informática Matutino</p>
+	</div>
+
+
+	<center>
+	<header>
+		<div class="contenedor" id="uno">
+			<a href="{{URL::action('agendacontroller@index')}}"><img class="icon" src="inicio.png"></a>
+			<p class="texto">Inicio</p>
+		</div>
+        <div class="contenedor" id="dos">
+          <a href="{{URL::action('lab_informaticacontroller@index')}}"><img class="icon" src="informatica.png"></a>
+          <p class="texto">Informática</p>
+        </div>
+</header>
+</center>
+<div id="modal_form">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Agregar Reservación de Laboratorio</button>
+</div>
+
+
+
+
+<!------------------------------------------------------------Calendar----------------------------------------------------------->
+
+
+
+
+<div class="container">
+  <div class="row">
+      <a href="{{URL::action('lab_informaticacontroller@show')}}" class="btn btn-primary">Horarios de Hoy Ocupados</a>
+
+  </div>
+  <br>
+  <div>
+    <table>
+      <tr>
+        <th>OCUPADO</th>
+        <th bgcolor="#FF0000" width="45px" height="35px"></th>
+     </tr>
+    </table>
+  </div>
+  <br>
+  <br>
+  <div id="calendar_informatica">
+  <div class="">
+
+      @if(count($errors) > 0)
+      <div class="alert alert-danger">
+        <ul>
+          @foreach($errors->all() as $error)
+          <li>{{$error}}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
+
+      @if(\Session::has('success'))
+      <div class="alert alert-success">
+        <p>{{ \Session::get('success')}}</p>
+      </div>
+      @endif
+
+      @if(\Session::has('danger'))
+      <div class="alert alert-danger">
+        <p>{{ \Session::get('danger')}}</p>
+      </div>
+      @endif
+
+    <div class="colmd-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div  class="panel-heading" style="background-color: #2e6da4; color: white; text-align: center;">
+        Agenda Informática
+        </div>
+          <div class="panel-body">
+         
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

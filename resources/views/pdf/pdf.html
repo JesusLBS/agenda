@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Auditorio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type = "text/javascript" src = "jquery-3.3.1.js"> </script> 
+  <link rel="stylesheet" type="text/css" href="formulario.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css"> 
+/*Formulario*/
+
+.forpdf{
+  width: 40%;
+  background-color: red;
+}
+
+
+
+
+div#titulo_form{
+  width:100%;
+  margin-top:17px;
+
+}
+p#titulo_form_1{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+</style>
+</head> 
+<body>
+
+
+
+
+
+    <img  id="img1_estado" src="estadodemexico.png" width="35%">
+
+
+    <p  id="texto">COLEGIO DE EDUCACIÓN PROFESIONAL  TÉCNICA DEL ESTADO DE MÉXICO</p>
+
+ 
+    <img  id="img2_conalep" src="conalep.png" width="100%" height="">
+ <br>
+ <br>
+ <br>
+ <br>
+<center>
+<table>
+  <th><td>Código:15-528-PO-15-F03  </td></th>
+  <th><td>   Revisión:01 </td></th>
+  <th><td>  Fecha de Aprovación:26/06/2018 </td></th>
+  <th><td>    Página:01</td></th>
+</table>
+</center>
+  
+<div id="titulo_form">
+    <p id="titulo_form_1">Auditorio No AUDITORIO MATUTINO</p>
+</div>
+
+
+
+<p>ID {{$events->id_auditorio_mat}}</p>
+<br>
+<p>Módulo {{$events->modulo_id}}</p>
+<br>
+<p>Número y Nombre Practica  {{$events->nombreprac_auditorio_mat}}</p>
+<br>
+<p>Unidad de Aprendizaje {{$events->unidad_auditorio_mat}}</p>
+<br>
+<center><p>Desarrollo de la Practica</p></center>
+<p>{{$events->desarrollo_auditorio_mat}}</p>
+<br>
+<p>Docente: {{$events->docente_id}}</p><o>Número de Alumnos:  {{$events->numalumnos_auditorio_mat}}</p>
+<br>
+<p>Fecha de Resevación 2  {{$events->created_at}}</p>
+<br>
+<p>Fecha y Hora Inicio {{$events->start_date}}</p><p>Fecha y Hora Final: {{$events->end_date}}</p>
+<br>
+
+<center><p>Observaciones</p></center>
+<br>
+<p>  {{$events->observaciones_auditorio_mat}}</p>
+
+
+<br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

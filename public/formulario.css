@@ -1,0 +1,84 @@
+
+/*Formulario*/
+#formulario_aula1{
+	background-color: white;
+	width: 80%;
+	margin: auto;
+	font-size: 1em;
+	color: black;
+}
+div#titulo_form{
+	width:100%;
+	margin-top:17px;
+
+}
+p#titulo_form_1{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+
+#logos{
+  overflow: hidden;
+  line-height: 40px;
+  background-color: white;
+
+}
+#img1_estado{
+  display: inline-block;
+  width: 30%;
+  height: 15%;
+  float: left;
+  border: 1px solid white;
+}
+#texto{
+	display: inline-block;
+    width: 40%;
+    height: 10%;
+	float: left;
+	border: 1px solid white;
+	font-weight: bold;
+	text-align: center;
+}
+#img2_conalep{
+  display: inline-block;
+  width: 30%;
+  height: 10%;
+  float: right;
+  border: 1px solid white;
+}
+#info_documento{
+
+	background-color: white;	
+	line-height: 30px; 
+	width: 100%;
+}
+#codigo{
+	display: inline-block;
+	background-color: white;
+	border: 1px solid white;
+	width: 30%;
+}
+
+#Campo2{
+	display: inline-block;
+	background-color: white;
+	border: 1px solid white;
+	width: 18%;
+}
+
+#Campo3{
+	display: inline-block;
+	background-color: white;
+	border: 1px solid white;
+	width: 30%;
+}
+
+#Campo4{
+	display: inline-block;
+	background-color: white;
+	border: 1px solid white;
+	width: 20%;
+}
+
+
